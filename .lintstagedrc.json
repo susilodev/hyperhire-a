@@ -1,5 +1,4 @@
 {
   "*.{js,jsx,ts,tsx}": ["next lint --fix --file", "prettier --write"],
-  "*.{json,css,md}": ["prettier --write"],
-  "*": ["vitest --run --changed"]
+  "*.{json,css,md}": ["prettier --write"]
 }

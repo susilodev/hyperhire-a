@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-test('should Trigger Error maximum File Upload', async ({ page }) => {
+test('test 1', async ({ page }) => {
   await page.goto('http://localhost:3000');
 
   await page.click('[data-testid="upload-section"]');
@@ -21,7 +21,7 @@ test('should Trigger Error maximum File Upload', async ({ page }) => {
   expect(errorElement).toBeDefined();
 });
 
-test('expect File Successfully Uploaded', async ({ page }) => {
+test('test 2', async ({ page }) => {
   await page.goto('http://localhost:3000');
 
   await page.click('[data-testid="upload-section"]');
