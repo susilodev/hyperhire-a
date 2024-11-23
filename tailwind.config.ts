@@ -22,6 +22,10 @@ const config: Config = {
           old: '#288BE7',
           light: '#26C2B9',
         },
+        badge: {
+          text: '#5E626F',
+          border: '#C1C5CF',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -1,10 +1,10 @@
 'use client';
 
 import * as React from 'react';
+import Image from 'next/image';
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/atoms/button';
-import { ChevronRightIcon, ChevronLeftIcon } from '@radix-ui/react-icons';
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -184,7 +184,8 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         onClick={scrollPrev}
         {...props}>
         {/* <Image src="/assets/icons/vector-left.svg" alt="arrow left" width={8} height={16} /> */}
-        <ChevronLeftIcon className="h-8 w-8 font-light" />
+        {/* <ChevronLeftIcon className="" /> */}
+        <Image src="/assets/icons/vector-left.svg" width={13} height={26} alt="next" />
         <span className="sr-only">Previous slide</span>
       </Button>
     );
@@ -211,7 +212,8 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
         disabled={!canScrollNext}
         onClick={scrollNext}
         {...props}>
-        <ChevronRightIcon className="w-8 h-auto" />
+        {/* <ChevronRightIcon className=" debug-red" /> */}
+        <Image src="/assets/icons/vector-right.svg" width={13} height={26} alt="next" />
         <span className="sr-only">Next slide</span>
       </Button>
     );
