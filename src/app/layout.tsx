@@ -1,7 +1,14 @@
 'use client';
 
 import './globals.css';
-import { Navbar } from '@/components/modules/Navbar';
+import { Poppins } from '@next/font/google';
+
+// Load font Poppins
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // Pilih bobot font yang diinginkan
+  variable: '--font-poppins', // Variabel CSS untuk Tailwind
+});
 
 export default function RootLayout({
   children,
@@ -10,9 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        <Navbar />
-        <main className="mx-auto flex w-full max-w-[1400px] flex-col px-4 lg:px-6">{children}</main>
+      <body className={poppins.variable}>
+        <main className="mx-auto flex w-full flex-col font-sans">{children}</main>
       </body>
     </html>
   );

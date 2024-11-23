@@ -11,7 +11,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(151.17deg, #26C2B9, #288BE7)',
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)', 'sans-serif'], // Atur Poppins sebagai default
+      },
       colors: {
+        header: {
+          old: '#288BE7',
+          light: '#26C2B9',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -25,6 +35,7 @@ const config: Config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          blue: '#4A77FF',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
